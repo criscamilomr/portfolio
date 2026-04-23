@@ -1,0 +1,322 @@
+/* ========================================
+   PHILOSOPHY SECTION
+   ======================================== */
+.philosophy-section {
+  padding: var(--spacing-section-padding) 0;
+  background-color: var(--color-surface-container-lowest);
+  border-top: 1px solid var(--color-surface-variant);
+  border-bottom: 1px solid var(--color-surface-variant);
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.philosophy-label {
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.philosophy-body {
+  color: var(--color-on-surface-variant);
+  max-width: 36rem;
+  margin-bottom: 2rem;
+}
+
+.philosophy-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.philosophy-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.stat-item {
+  background-color: var(--color-surface);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-surface-variant);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.4s ease;
+  text-align: center;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(171, 0, 162, 0.08);
+    border-color: var(--color-secondary);
+  }
+}
+
+.stat-number {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-secondary);
+  line-height: 1;
+}
+
+.stat-label {
+  color: var(--color-on-surface-variant);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 13px;
+}
+
+/* ========================================
+   SERVICES SECTION
+   ======================================== */
+.services-section {
+  padding: var(--spacing-section-padding) 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-subtitle {
+  color: var(--color-on-surface-variant);
+  max-width: 32rem;
+  margin: 0.75rem auto 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-gutter);
+}
+
+.service-card {
+  background-color: var(--color-surface-container-lowest);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-surface-variant);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-secondary), var(--color-secondary-container));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(171, 0, 162, 0.08);
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+
+  &:hover .service-icon {
+    background-color: var(--color-secondary);
+    color: var(--color-on-secondary);
+    transform: scale(1.1);
+  }
+}
+
+.service-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-surface-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--color-secondary);
+  transition: all 0.4s ease;
+
+  .material-symbols-outlined {
+    font-size: 28px;
+  }
+}
+
+.service-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-on-surface);
+  margin-bottom: 0.75rem;
+}
+
+.service-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-on-surface-variant);
+}
+
+/* ========================================
+   TECH STACK MARQUEE
+   ======================================== */
+.tech-section {
+  padding: var(--spacing-section-padding) 0;
+  background-color: var(--color-surface-container-lowest);
+  border-top: 1px solid var(--color-surface-variant);
+  border-bottom: 1px solid var(--color-surface-variant);
+  overflow: hidden;
+}
+
+.tech-marquee-wrapper {
+  margin-top: 3rem;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--color-surface-container-lowest), transparent);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(270deg, var(--color-surface-container-lowest), transparent);
+  }
+}
+
+.tech-marquee {
+  overflow: hidden;
+}
+
+.tech-marquee-track {
+  display: flex;
+  gap: 1rem;
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-surface-variant);
+  border-radius: 100px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+  white-space: nowrap;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ========================================
+   CTA SECTION
+   ======================================== */
+.cta-section {
+  padding: var(--spacing-section-padding) 0;
+  background: linear-gradient(135deg, rgba(171, 0, 162, 0.04), rgba(253, 97, 236, 0.06));
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(171, 0, 162, 0.06), transparent 70%);
+    pointer-events: none;
+  }
+}
+
+.cta-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-title {
+  margin-bottom: 1rem;
+}
+
+.cta-text {
+  color: var(--color-on-surface-variant);
+  max-width: 36rem;
+  margin: 0 auto 2.5rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 1.125rem 2.5rem;
+  box-shadow: 0 12px 40px rgba(171, 0, 162, 0.25);
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 16px 50px rgba(171, 0, 162, 0.35);
+  }
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .philosophy-stats {
+    max-width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+}
