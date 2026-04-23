@@ -1,0 +1,106 @@
+<div class="container" style="padding-bottom: var(--section-padding);">
+  <!-- Section Header -->
+  <div style="margin-bottom: 5rem; max-width: 42rem;">
+    <h1 class="font-headline-xl" style="margin-bottom: 1rem;">{{ ts.t().projects_title }}</h1>
+    <p class="font-body-lg" style="color: var(--color-on-surface-variant);">{{ ts.t().projects_subtitle }}</p>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="projects-showcase">
+
+    <!-- VR Dental Anatomy -->
+    <div class="showcase-card">
+      <div class="showcase-image-area" style="padding: 0; overflow: hidden; position: relative;">
+        <img alt="Aplicación de Realidad Virtual para Anatomía Dental"
+          ngSrc="assets/images/pdg.png" fill
+          style="object-fit: cover;" />
+      </div>
+      <div class="showcase-text">
+        <span class="showcase-tag">{{ ts.t().proj_vr_tag }}</span>
+        <h2 class="showcase-title">{{ ts.t().proj_vr_title }}</h2>
+        <p class="showcase-desc">
+          {{ ts.t().proj_vr_desc }}
+        </p>
+        <div class="showcase-tags-row">
+          <span class="tech-tag">Unity</span>
+          <span class="tech-tag">C#</span>
+          <span class="tech-tag">VR/XR</span>
+          <span class="tech-tag">3D Modeling</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Biscoli -->
+    <div class="showcase-card reverse">
+      <div class="showcase-image-area" style="padding: 0; align-items: stretch;">
+        <iframe src="https://biscoli.co" title="Biscoli Preview"
+          style="width: 100%; height: 100%; min-height: 350px; border: none; border-radius: inherit;"></iframe>
+      </div>
+      <div class="showcase-text">
+        <span class="showcase-tag">{{ ts.t().proj_biscoli_tag }}</span>
+        <h2 class="showcase-title">Biscoli</h2>
+        <p class="showcase-desc">
+          {{ ts.t().proj_biscoli_desc }}
+        </p>
+        <div class="showcase-tags-row">
+          <span class="tech-tag">Angular</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">E-commerce</span>
+          <span class="tech-tag">Firebase</span>
+        </div>
+        <a href="https://biscoli.co" target="_blank" rel="noopener noreferrer" class="btn-primary"
+          style="margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+          {{ ts.t().proj_btn_visit }}
+          <span class="material-symbols-outlined" style="font-size: 18px;">open_in_new</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Tecnoquímicas Data Platform -->
+    <div class="showcase-card">
+      <div class="showcase-image-area">
+        <img alt="Logo Tecnoquímicas" ngSrc="assets/images/tq-logo.png" width="300" height="300"
+          style="width: 260px; height: 260px; object-fit: contain; background: #ffffff; padding: 1rem; border-radius: 16px;" />
+      </div>
+      <div class="showcase-text">
+        <span class="showcase-tag">{{ ts.t().proj_tq_tag }}</span>
+        <h2 class="showcase-title">{{ ts.t().proj_tq_title }}</h2>
+        <p class="showcase-desc">
+          {{ ts.t().proj_tq_desc }}
+        </p>
+        <div class="showcase-tags-row">
+          <span class="tech-tag">.NET Core</span>
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">AngularJS</span>
+          <span class="tech-tag">SQL Server</span>
+          <span class="tech-tag">Oracle DB</span>
+          <span class="tech-tag">ETL</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Universidad del Valle -->
+    <div class="showcase-card reverse">
+      <div class="showcase-image-area" style="padding: 0; overflow: hidden; position: relative;">
+        <img alt="Sistema de Gestión - Universidad del Valle"
+          ngSrc="assets/images/monitoria.png" fill
+          style="object-fit: cover;" />
+      </div>
+      <div class="showcase-text">
+        <span class="showcase-tag">{{ ts.t().proj_univalle_tag }}</span>
+        <h2 class="showcase-title">{{ ts.t().proj_univalle_title }}</h2>
+        <p class="showcase-desc">
+          {{ ts.t().proj_univalle_desc }}
+        </p>
+        <div class="showcase-tags-row">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Django</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">Joomla</span>
+          <span class="tech-tag">Accesibilidad</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

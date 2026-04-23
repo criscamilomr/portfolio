@@ -1,0 +1,66 @@
+<div class="container" style="padding-bottom: var(--section-padding);">
+  <div class="contact-grid">
+    <!-- Left Column: Context & Socials -->
+    <div class="contact-info">
+      <div>
+        <h1 class="font-headline-xl">{{ ts.t().contact_title }}<span style="color: var(--color-secondary);">.</span></h1>
+        <p class="font-body-lg" style="color: var(--color-on-surface-variant); max-width: 28rem; margin-top: 1.5rem;">
+          {{ ts.t().contact_subtitle }}
+        </p>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="contact-details">
+        <a href="mailto:elfcamilo@gmail.com" class="contact-item">
+          <span class="material-symbols-outlined contact-icon">mail</span>
+          <span>elfcamilo&#64;gmail.com</span>
+        </a>
+        <a href="tel:+573228154564" class="contact-item">
+          <span class="material-symbols-outlined contact-icon">phone</span>
+          <span>+57 322 815 4564</span>
+        </a>
+        <div class="contact-item">
+          <span class="material-symbols-outlined contact-icon">location_on</span>
+          <span>Cali, Colombia</span>
+        </div>
+        <a href="https://linkedin.com/in/ccmontanomr/" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <span class="material-symbols-outlined contact-icon">person</span>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Column: Minimalist Form -->
+    <div class="contact-form-wrapper">
+      <form class="contact-form">
+        <!-- Input: Name -->
+        <div class="form-group">
+          <input class="form-input peer" id="contact-name" name="name" placeholder=" " required type="text"/>
+          <label class="form-label" for="contact-name">{{ ts.t().contact_form_name }}</label>
+        </div>
+        <!-- Input: Email -->
+        <div class="form-group">
+          <input class="form-input peer" id="contact-email" name="email" placeholder=" " required type="email"/>
+          <label class="form-label" for="contact-email">{{ ts.t().contact_form_email }}</label>
+        </div>
+        <!-- Input: Subject -->
+        <div class="form-group">
+          <input class="form-input peer" id="contact-subject" name="subject" placeholder=" " type="text"/>
+          <label class="form-label" for="contact-subject">{{ ts.t().contact_form_subject }}</label>
+        </div>
+        <!-- Input: Message -->
+        <div class="form-group">
+          <textarea class="form-input peer" id="contact-message" name="message" placeholder=" " required rows="4" style="resize: none;"></textarea>
+          <label class="form-label" for="contact-message">{{ ts.t().contact_form_message }}</label>
+        </div>
+        <!-- Submit Button -->
+        <div style="padding-top: 1rem;">
+          <button class="btn-primary" type="submit" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            <span>{{ ts.t().contact_form_submit }}</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

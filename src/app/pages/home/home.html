@@ -1,0 +1,60 @@
+<section class="hero-section">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <h1 class="font-headline-xl">
+        Cristian<br />Camilo<br />Montaño<span style="color: var(--color-secondary);">.</span>
+      </h1>
+      <p class="font-body-lg">
+        {{ ts.t().home_hero_subtitle }}
+      </p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a routerLink="/proyectos" class="btn-primary">
+          {{ ts.t().home_hero_btn_projects }}
+        </a>
+        <a routerLink="/contacto" class="btn-secondary">
+          {{ ts.t().home_hero_btn_contact }}
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-overlay"></div>
+      <img alt="Foto profesional de Cristian Camilo Montaño Renteria"
+        ngSrc="assets/images/profile.png" fill priority />
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section container">
+  <div class="gallery-header">
+    <h2 class="font-headline-md">{{ ts.t().home_featured_title }}</h2>
+    <a class="font-label-sm" routerLink="/acerca-de-mi"
+      style="color: var(--color-secondary); text-decoration: none;">{{ ts.t().home_featured_link }}</a>
+  </div>
+  <div class="gallery-grid">
+    <!-- Tecnoquímicas -->
+    <div class="project-card">
+      <div class="project-image-wrapper aspect-video">
+        <div class="project-image-overlay"></div>
+        <img alt="Logo de Tecnoquímicas, empresa farmacéutica colombiana"
+          ngSrc="assets/images/tq-logo.png" fill
+          style="object-fit: contain; background: #fff;" />
+      </div>
+      <div class="project-info">
+        <span class="font-label-sm" style="color: var(--color-outline);">{{ ts.t().home_tq_tag }}</span>
+        <h3 class="font-headline-md">Tecnoquímicas</h3>
+      </div>
+    </div>
+    <!-- Biscoli -->
+    <div class="project-card">
+      <div class="project-image-wrapper aspect-video" style="overflow: hidden;">
+        <div class="project-image-overlay" style="pointer-events: none;"></div>
+        <iframe src="https://biscoli.co" title="Biscoli Preview"
+          style="width: 100%; height: 100%; border: none; position: absolute; inset: 0; pointer-events: none;"></iframe>
+      </div>
+      <div class="project-info">
+        <span class="font-label-sm" style="color: var(--color-outline);">{{ ts.t().home_biscoli_tag }}</span>
+        <h3 class="font-headline-md">Biscoli</h3>
+      </div>
+    </div>
+  </div>
+</section>

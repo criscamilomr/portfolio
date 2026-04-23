@@ -1,0 +1,149 @@
+<div class="container" style="padding-bottom: var(--section-padding);">
+  <!-- Bio Section -->
+  <section class="about-bio-section">
+    <div class="about-bio-text">
+      <h1 class="font-headline-xl" [innerHTML]="ts.t().about_title"></h1>
+      <p class="font-body-lg" style="color: var(--color-on-surface-variant); max-width: 42rem;">
+        {{ ts.t().about_intro }}
+      </p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+        <a href="https://linkedin.com/in/ccmontanomr/" target="_blank" rel="noopener noreferrer" class="btn-primary">Ver
+          LinkedIn</a>
+      </div>
+    </div>
+    <div class="about-bio-image">
+      <div class="about-photo-wrapper">
+        <img alt="Foto profesional de Cristian Camilo Montaño Renteria" ngSrc="assets/images/profile.png" width="380"
+          height="475" priority />
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Grid -->
+  <section style="margin-bottom: var(--spacing-section-padding);">
+    <h2 class="font-headline-lg" style="margin-bottom: 4rem; text-align: center;">{{ ts.t().about_skills_title }}</h2>
+    <div class="skills-grid">
+      <!-- Languages -->
+      <div class="skill-card">
+        <div class="skill-icon">
+          <span class="material-symbols-outlined">code</span>
+        </div>
+        <h3 class="skill-card-title">{{ ts.t().about_skills_lang_title }}</h3>
+        <p class="skill-card-text">{{ ts.t().about_skills_lang_desc }}</p>
+      </div>
+      <!-- Frontend -->
+      <div class="skill-card">
+        <div class="skill-icon">
+          <span class="material-symbols-outlined">web</span>
+        </div>
+        <h3 class="skill-card-title">{{ ts.t().about_skills_frontend }}</h3>
+        <p class="skill-card-text">{{ ts.t().about_skills_front_desc }}</p>
+      </div>
+      <!-- Backend -->
+      <div class="skill-card">
+        <div class="skill-icon">
+          <span class="material-symbols-outlined">dns</span>
+        </div>
+        <h3 class="skill-card-title">{{ ts.t().about_skills_backend }}</h3>
+        <p class="skill-card-text">{{ ts.t().about_skills_back_desc }}</p>
+      </div>
+      <!-- Databases -->
+      <div class="skill-card">
+        <div class="skill-icon">
+          <span class="material-symbols-outlined">database</span>
+        </div>
+        <h3 class="skill-card-title">{{ ts.t().about_skills_db_title }}</h3>
+        <p class="skill-card-text">{{ ts.t().about_skills_db_desc }}</p>
+      </div>
+      <!-- DevOps -->
+      <div class="skill-card">
+        <div class="skill-icon">
+          <span class="material-symbols-outlined">cloud</span>
+        </div>
+        <h3 class="skill-card-title">{{ ts.t().about_skills_tools }}</h3>
+        <p class="skill-card-text">{{ ts.t().about_skills_tools_desc }}</p>
+      </div>
+      <!-- Testing -->
+      <div class="skill-card">
+        <div class="skill-icon">
+          <span class="material-symbols-outlined">bug_report</span>
+        </div>
+        <h3 class="skill-card-title">{{ ts.t().about_skills_test_title }}</h3>
+        <p class="skill-card-text">{{ ts.t().about_skills_test_desc }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Timeline -->
+  <section>
+    <h2 class="font-headline-lg" style="margin-bottom: 4rem;">{{ ts.t().about_timeline_title }}</h2>
+    <div class="timeline">
+      <!-- Tecnoquímicas -->
+      <div class="timeline-item">
+        <div class="timeline-date-col">
+          <div class="timeline-date active">2024 — 2025</div>
+          <div class="timeline-dot-indicator"></div>
+        </div>
+        <div class="timeline-content-col">
+          <div class="timeline-company-header">
+            <img ngSrc="assets/images/tq-logo.png" alt="Logo Tecnoquímicas" class="timeline-company-logo" width="48"
+              height="48" />
+            <div>
+              <h3 class="timeline-role">{{ ts.t().about_tq_role }}</h3>
+              <h4 class="timeline-company">{{ ts.t().about_tq_company }}</h4>
+            </div>
+          </div>
+          <ul class="timeline-bullets">
+            <li>{{ ts.t().about_tq_bullet1 }}</li>
+            <li>{{ ts.t().about_tq_bullet2 }}</li>
+            <li>{{ ts.t().about_tq_bullet3 }}</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Universidad del Valle -->
+      <div class="timeline-item">
+        <div class="timeline-date-col">
+          <div class="timeline-date">2023 — 2024</div>
+          <div class="timeline-dot-indicator"></div>
+        </div>
+        <div class="timeline-content-col">
+          <div class="timeline-company-header">
+            <img ngSrc="assets/images/univalle-logo.png" alt="Logo Universidad del Valle" class="timeline-company-logo"
+              width="48" height="48" />
+            <div>
+              <h3 class="timeline-role">{{ ts.t().about_uv1_role }}</h3>
+              <h4 class="timeline-company">{{ ts.t().about_uv1_company }}</h4>
+            </div>
+          </div>
+          <ul class="timeline-bullets">
+            <li>{{ ts.t().about_uv1_bullet1 }}</li>
+            <li>{{ ts.t().about_uv1_bullet2 }}</li>
+            <li>{{ ts.t().about_uv1_bullet3 }}</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Educación -->
+      <div class="timeline-item">
+        <div class="timeline-date-col">
+          <div class="timeline-date">2020 — 2025</div>
+          <div class="timeline-dot-indicator"></div>
+        </div>
+        <div class="timeline-content-col">
+          <div class="timeline-company-header">
+            <img ngSrc="assets/images/univalle-logo.png" alt="Logo Universidad del Valle" class="timeline-company-logo"
+              width="48" height="48" />
+            <div>
+              <h3 class="timeline-role">{{ ts.t().about_uv2_role }}</h3>
+              <h4 class="timeline-company">{{ ts.t().about_uv2_company }}</h4>
+            </div>
+          </div>
+          <p class="font-body-md" style="color: var(--color-on-surface-variant); max-width: 48rem;">
+            {{ ts.t().about_uv2_desc }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
