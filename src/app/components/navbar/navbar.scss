@@ -20,14 +20,19 @@
 }
 
 .nav-brand {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--color-on-surface);
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  letter-spacing: -0.02em;
+  transition: opacity 0.3s ease;
+
+  img {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+  }
   
   &:hover {
-    color: var(--color-secondary);
+    opacity: 0.8;
   }
 }
 
