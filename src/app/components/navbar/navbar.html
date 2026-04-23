@@ -1,15 +1,20 @@
 <nav class="top-nav">
   <div class="nav-container">
-    <div class="nav-brand" routerLink="/">CCM</div>
+    <div class="nav-brand" routerLink="/">Cristian</div>
     <ul class="nav-links">
-      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ ts.t().nav_home }}</a></li>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ ts.t().nav_home
+          }}</a></li>
       <li><a routerLink="/acerca-de-mi" routerLinkActive="active">{{ ts.t().nav_about }}</a></li>
       <li><a routerLink="/proyectos" routerLinkActive="active">{{ ts.t().nav_projects }}</a></li>
       <li><a routerLink="/contacto" routerLinkActive="active">{{ ts.t().nav_contact }}</a></li>
     </ul>
-    <div class="nav-trailing" style="display: flex; align-items: center;">
-      <button (click)="ts.toggleLanguage()" style="background: none; border: none; font-size: 1.25rem; font-weight: 700; font-family: inherit; color: var(--color-on-surface); cursor: pointer; padding: 0.25rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-on-surface)'">
-        {{ ts.currentLang() === 'es' ? 'EN' : 'ES' }}
+    <div class="nav-trailing">
+      <button class="lang-toggle" (click)="ts.toggleLanguage()" [title]="ts.currentLang() === 'es' ? 'Switch to English' : 'Cambiar a Español'">
+        @if (ts.currentLang() === 'es') {
+          <img ngSrc="assets/images/flags/en.png" alt="English" width="24" height="24">
+        } @else {
+          <img ngSrc="assets/images/flags/es.png" alt="Español" width="24" height="24">
+        }
       </button>
     </div>
   </div>

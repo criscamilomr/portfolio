@@ -9,7 +9,7 @@ export const TRANSLATIONS = {
     nav_projects: 'Proyectos',
     nav_about: 'Acerca de mí',
     nav_contact: 'Contacto',
-    
+
     // Footer
     footer_rights: 'Todos los derechos reservados.',
     footer_source: 'Ver código fuente en GitHub',
@@ -20,8 +20,33 @@ export const TRANSLATIONS = {
     home_hero_btn_contact: 'Contáctame',
     home_featured_title: 'Experiencia Destacada',
     home_featured_link: 'Ver Trayectoria Completa',
-    home_tq_tag: 'Desarrollador Full-Stack · 6 meses',
+    home_tq_tag: 'Desarrollador Full-Stack',
     home_biscoli_tag: 'E-commerce · Negocio Propio',
+
+    // Home - Philosophy
+    home_philosophy_label: 'Mi Filosofía',
+    home_philosophy_title: 'Código con propósito, diseño con intención',
+    home_philosophy_text: 'Creo que la tecnología tiene el poder de transformar ideas en realidad. Mi enfoque combina la ingeniería robusta con un diseño centrado en el usuario, buscando siempre crear experiencias digitales que no solo funcionen, sino que generen impacto real.',
+    home_philosophy_btn: 'Conoce más sobre mí',
+
+    // Home - Services
+    home_services_title: 'Lo que hago',
+    home_services_subtitle: 'Áreas de enfoque en las que puedo aportar valor a tu proyecto.',
+    home_svc_fullstack_title: 'Desarrollo Full-Stack',
+    home_svc_fullstack_desc: 'Construcción de aplicaciones web completas, desde APIs robustas hasta interfaces de usuario modernas y responsivas.',
+    home_svc_data_title: 'Arquitectura de Datos',
+    home_svc_data_desc: 'Diseño e implementación de pipelines de datos, integración de fuentes múltiples y optimización de bases de datos para alto rendimiento.',
+    home_svc_immersive_title: 'Experiencias Inmersivas',
+    home_svc_immersive_desc: 'Desarrollo de aplicaciones de Realidad Virtual enfocadas en educación y entrenamiento profesional.',
+
+    // Home - Tech Stack
+    home_tech_title: 'Tecnologías',
+    home_tech_subtitle: 'Las herramientas con las que trabajo día a día.',
+
+    // Home - CTA
+    home_cta_title: '¿Tienes un proyecto en mente?',
+    home_cta_text: 'Estoy abierto a nuevas oportunidades y colaboraciones. Si buscas un desarrollador comprometido con la calidad y el impacto, hablemos.',
+    home_cta_btn: 'Empecemos a construir',
 
     // Projects
     projects_title: 'Proyectos',
@@ -56,10 +81,10 @@ export const TRANSLATIONS = {
     about_skills_test_title: 'Pruebas & Metodologías',
     about_skills_test_desc: 'Unitarias, Integración, E2E, Agile/Scrum, Clean Architecture, ETL',
     about_timeline_title: 'Trayectoria Profesional y Académica',
-    
+
     // About Timeline TQ
     about_tq_role: 'Desarrollador Full-Stack',
-    about_tq_company: 'Tecnoquímicas · 6 meses',
+    about_tq_company: 'Tecnoquímicas',
     about_tq_bullet1: 'Diseñé y desarrollé interfaces de usuario complejas utilizando AngularJS y React, mejorando la eficiencia operativa del sistema corporativo.',
     about_tq_bullet2: 'Diseñé, desarrollé e implementé APIs RESTful con C# y .NET Core, facilitando la integración de datos para aplicaciones de nivel empresarial.',
     about_tq_bullet3: 'Gestioné bases de datos SQL Server y Oracle, realizando modelado, consultas y optimización de rendimiento para grandes conjuntos de datos.',
@@ -91,7 +116,7 @@ export const TRANSLATIONS = {
     nav_projects: 'Projects',
     nav_about: 'About Me',
     nav_contact: 'Contact',
-    
+
     // Footer
     footer_rights: 'All rights reserved.',
     footer_source: 'View source code on GitHub',
@@ -102,8 +127,33 @@ export const TRANSLATIONS = {
     home_hero_btn_contact: 'Contact Me',
     home_featured_title: 'Featured Experience',
     home_featured_link: 'View Full Journey',
-    home_tq_tag: 'Full-Stack Developer · 6 months',
+    home_tq_tag: 'Full-Stack Developer',
     home_biscoli_tag: 'E-commerce · Own Business',
+
+    // Home - Philosophy
+    home_philosophy_label: 'My Philosophy',
+    home_philosophy_title: 'Code with purpose, design with intention',
+    home_philosophy_text: 'I believe technology has the power to turn ideas into reality. My approach combines robust engineering with user-centered design, always striving to create digital experiences that don\'t just work — they make a real impact.',
+    home_philosophy_btn: 'Learn more about me',
+
+    // Home - Services
+    home_services_title: 'What I do',
+    home_services_subtitle: 'Focus areas where I can add value to your project.',
+    home_svc_fullstack_title: 'Full-Stack Development',
+    home_svc_fullstack_desc: 'Building complete web applications, from robust APIs to modern, responsive user interfaces.',
+    home_svc_data_title: 'Data Architecture',
+    home_svc_data_desc: 'Designing and implementing data pipelines, multi-source integration, and database optimization for high performance.',
+    home_svc_immersive_title: 'Immersive Experiences',
+    home_svc_immersive_desc: 'Developing Virtual Reality applications focused on education and professional training.',
+
+    // Home - Tech Stack
+    home_tech_title: 'Technologies',
+    home_tech_subtitle: 'The tools I work with every day.',
+
+    // Home - CTA
+    home_cta_title: 'Have a project in mind?',
+    home_cta_text: 'I\'m open to new opportunities and collaborations. If you\'re looking for a developer committed to quality and impact, let\'s talk.',
+    home_cta_btn: 'Let\'s start building',
 
     // Projects
     projects_title: 'Projects',
@@ -138,10 +188,10 @@ export const TRANSLATIONS = {
     about_skills_test_title: 'Testing & Methodologies',
     about_skills_test_desc: 'Unit, Integration, E2E, Agile/Scrum, Clean Architecture, ETL',
     about_timeline_title: 'Professional and Academic Journey',
-    
+
     // About Timeline TQ
     about_tq_role: 'Full-Stack Developer',
-    about_tq_company: 'Tecnoquímicas · 6 months',
+    about_tq_company: 'Tecnoquímicas',
     about_tq_bullet1: 'Designed and developed complex user interfaces using AngularJS and React, improving operational efficiency of the corporate system.',
     about_tq_bullet2: 'Designed, developed, and deployed RESTful APIs with C# and .NET Core, facilitating data integration for enterprise-level applications.',
     about_tq_bullet3: 'Managed SQL Server and Oracle databases, performing modeling, queries, and performance optimization for large datasets.',
@@ -177,7 +227,7 @@ export class TranslationService {
   toggleLanguage() {
     this.currentLang.update(lang => lang === 'es' ? 'en' : 'es');
   }
-  
+
   setLanguage(lang: Language) {
     this.currentLang.set(lang);
   }

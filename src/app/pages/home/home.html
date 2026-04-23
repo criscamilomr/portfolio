@@ -1,3 +1,4 @@
+<!-- ========== HERO ========== -->
 <section class="hero-section">
   <div class="container hero-grid">
     <div class="hero-content">
@@ -24,6 +25,77 @@
   </div>
 </section>
 
+<!-- ========== PHILOSOPHY ========== -->
+<section class="philosophy-section">
+  <div class="container philosophy-grid">
+    <div class="philosophy-text">
+      <span class="font-label-sm philosophy-label">{{ ts.t().home_philosophy_label }}</span>
+      <h2 class="font-headline-lg">{{ ts.t().home_philosophy_title }}</h2>
+      <p class="font-body-lg philosophy-body">
+        {{ ts.t().home_philosophy_text }}
+      </p>
+      <a routerLink="/acerca-de-mi" class="btn-secondary">{{ ts.t().home_philosophy_btn }}</a>
+    </div>
+    <div class="philosophy-visual">
+      <div class="philosophy-stats">
+        <div class="stat-item">
+          <span class="stat-number">2+</span>
+          <span class="stat-label font-label-sm">{{ ts.currentLang() === 'es' ? 'Años de experiencia' : 'Years of experience' }}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5+</span>
+          <span class="stat-label font-label-sm">{{ ts.currentLang() === 'es' ? 'Proyectos completados' : 'Completed projects' }}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100K+</span>
+          <span class="stat-label font-label-sm">{{ ts.currentLang() === 'es' ? 'Registros procesados al día' : 'Records processed daily' }}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">40%</span>
+          <span class="stat-label font-label-sm">{{ ts.currentLang() === 'es' ? 'Reducción de tiempo de trabajo' : 'Workflow time reduced' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="font-headline-lg">{{ ts.t().home_services_title }}</h2>
+      <p class="font-body-lg section-subtitle">{{ ts.t().home_services_subtitle }}</p>
+    </div>
+    <div class="services-grid">
+      <!-- Full-Stack -->
+      <div class="service-card">
+        <div class="service-icon">
+          <span class="material-symbols-outlined">deployed_code</span>
+        </div>
+        <h3 class="service-title">{{ ts.t().home_svc_fullstack_title }}</h3>
+        <p class="service-desc">{{ ts.t().home_svc_fullstack_desc }}</p>
+      </div>
+      <!-- Data Architecture -->
+      <div class="service-card">
+        <div class="service-icon">
+          <span class="material-symbols-outlined">analytics</span>
+        </div>
+        <h3 class="service-title">{{ ts.t().home_svc_data_title }}</h3>
+        <p class="service-desc">{{ ts.t().home_svc_data_desc }}</p>
+      </div>
+      <!-- Immersive Experiences -->
+      <div class="service-card">
+        <div class="service-icon">
+          <span class="material-symbols-outlined">view_in_ar</span>
+        </div>
+        <h3 class="service-title">{{ ts.t().home_svc_immersive_title }}</h3>
+        <p class="service-desc">{{ ts.t().home_svc_immersive_desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FEATURED EXPERIENCE ========== -->
 <section class="gallery-section container">
   <div class="gallery-header">
     <h2 class="font-headline-md">{{ ts.t().home_featured_title }}</h2>
@@ -56,5 +128,55 @@
         <h3 class="font-headline-md">Biscoli</h3>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ========== TECH STACK ========== -->
+<section class="tech-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="font-headline-lg">{{ ts.t().home_tech_title }}</h2>
+      <p class="font-body-lg section-subtitle">{{ ts.t().home_tech_subtitle }}</p>
+    </div>
+    <div class="tech-marquee-wrapper">
+      <div class="tech-marquee">
+        <div class="tech-marquee-track">
+          <span class="tech-pill">Angular</span>
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">TypeScript</span>
+          <span class="tech-pill">Go</span>
+          <span class="tech-pill">C# / .NET</span>
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">SQL Server</span>
+          <span class="tech-pill">MongoDB</span>
+          <span class="tech-pill">Docker</span>
+          <span class="tech-pill">Kubernetes</span>
+          <span class="tech-pill">AWS</span>
+          <span class="tech-pill">Git</span>
+          <!-- Duplicated for seamless loop -->
+          <span class="tech-pill">Angular</span>
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">TypeScript</span>
+          <span class="tech-pill">Go</span>
+          <span class="tech-pill">C# / .NET</span>
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">SQL Server</span>
+          <span class="tech-pill">MongoDB</span>
+          <span class="tech-pill">Docker</span>
+          <span class="tech-pill">Kubernetes</span>
+          <span class="tech-pill">AWS</span>
+          <span class="tech-pill">Git</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="cta-section">
+  <div class="container cta-content">
+    <h2 class="font-headline-lg cta-title">{{ ts.t().home_cta_title }}</h2>
+    <p class="font-body-lg cta-text">{{ ts.t().home_cta_text }}</p>
+    <a routerLink="/contacto" class="btn-primary cta-btn">{{ ts.t().home_cta_btn }}</a>
   </div>
 </section>
