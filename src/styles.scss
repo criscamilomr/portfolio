@@ -68,7 +68,7 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   background-color: var(--color-background);
   color: var(--color-on-background);
   font-family: 'Inter', sans-serif;
@@ -78,12 +78,16 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
 }
 
 app-root {
   display: flex;
   flex-direction: column;
   flex: 1;
+  position: relative;
+  z-index: 1;
 }
 
 main {
@@ -866,7 +870,25 @@ footer.main-footer {
 }
 
 @media (max-width: 768px) {
-  .nav-links, .nav-trailing {
+  :root {
+    --spacing-section-padding: 80px;
+    --spacing-gutter: 20px;
+  }
+  .font-headline-xl { font-size: 48px; }
+  .font-headline-lg { font-size: 36px; }
+  .font-headline-md { font-size: 28px; }
+  .hero-section {
+    min-height: auto;
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+  .gallery-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .nav-links {
     display: none;
   }
   .hero-grid {

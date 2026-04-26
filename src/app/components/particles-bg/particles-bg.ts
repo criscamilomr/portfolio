@@ -32,7 +32,7 @@ interface Particle {
       display: block;
       position: fixed;
       inset: 0;
-      z-index: -1;
+      z-index: 0;
       pointer-events: none;
     }
     canvas {
@@ -59,7 +59,7 @@ export class ParticlesBg implements AfterViewInit, OnDestroy {
   // Interaction radius — particles within this distance react to the cursor
   private readonly MOUSE_RADIUS = 180;
   // How many particles per 10 000 px² of screen area
-  private readonly DENSITY = 1.8;
+  private readonly DENSITY = 1.6;
   // Colour extracted from the design system: --color-secondary (#ab00a2)
   private readonly PARTICLE_R = 171;
   private readonly PARTICLE_G = 0;
@@ -129,8 +129,8 @@ export class ParticlesBg implements AfterViewInit, OnDestroy {
         y,
         baseX: x,
         baseY: y,
-        vx: (Math.random() - 0.5) * 0.15,
-        vy: (Math.random() - 0.5) * 0.15,
+        vx: (Math.random() - 0.4) * 0.4,
+        vy: (Math.random() - 0.4) * 0.4,
         radius,
         opacity: baseOpacity,
         baseOpacity,
