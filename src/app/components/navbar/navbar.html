@@ -1,6 +1,6 @@
 <nav class="top-nav">
   <div class="nav-container">
-    <div class="nav-brand" routerLink="/">
+    <div class="nav-brand" routerLink="/" (click)="closeMenu()">
       <img ngSrc="assets/images/logo.png" alt="Cristian Montaño" width="120" height="40" priority>
     </div>
     <ul class="nav-links">
@@ -19,5 +19,37 @@
         }
       </button>
     </div>
+    <!-- Mobile hamburger button -->
+    <button class="hamburger-btn" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Abrir menú de navegación">
+      <span class="hamburger-line" [class.open]="menuOpen()"></span>
+      <span class="hamburger-line" [class.open]="menuOpen()"></span>
+      <span class="hamburger-line" [class.open]="menuOpen()"></span>
+    </button>
   </div>
 </nav>
+
+<!-- Mobile sidebar overlay -->
+@if (menuOpen()) {
+  <div class="sidebar-overlay" (click)="closeMenu()"></div>
+}
+
+<!-- Mobile sidebar drawer -->
+<aside class="sidebar-drawer" [class.open]="menuOpen()" role="navigation" aria-label="Menú de navegación móvil">
+  <ul class="sidebar-links">
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">{{ ts.t().nav_home }}</a></li>
+    <li><a routerLink="/acerca-de-mi" routerLinkActive="active" (click)="closeMenu()">{{ ts.t().nav_about }}</a></li>
+    <li><a routerLink="/proyectos" routerLinkActive="active" (click)="closeMenu()">{{ ts.t().nav_projects }}</a></li>
+    <li><a routerLink="/contacto" routerLinkActive="active" (click)="closeMenu()">{{ ts.t().nav_contact }}</a></li>
+  </ul>
+  <div class="sidebar-footer">
+    <button class="lang-toggle" (click)="ts.toggleLanguage(); closeMenu()" [title]="ts.currentLang() === 'es' ? 'Switch to English' : 'Cambiar a Español'">
+      @if (ts.currentLang() === 'es') {
+        <img ngSrc="assets/images/flags/en.png" alt="English" width="28" height="28">
+        <span>English</span>
+      } @else {
+        <img ngSrc="assets/images/flags/es.png" alt="Español" width="28" height="28">
+        <span>Español</span>
+      }
+    </button>
+  </div>
+</aside>
