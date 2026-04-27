@@ -481,18 +481,30 @@ footer.main-footer {
 .about-bio-section {
   display: grid;
   grid-template-columns: 7fr 5fr;
+  grid-template-rows: auto 1fr;
   gap: var(--spacing-gutter);
   align-items: center;
   margin-bottom: var(--spacing-section-padding);
 }
 
-.about-bio-text {
+/* Desktop: title and desc in col 1, image spans col 2 */
+.about-bio-title {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.about-bio-desc {
+  grid-column: 1;
+  grid-row: 2;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
+  align-self: start;
 }
 
 .about-bio-image {
+  grid-column: 2;
+  grid-row: 1 / -1;
   display: flex;
   justify-content: center;
 }
@@ -706,16 +718,43 @@ footer.main-footer {
 .showcase-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-rows: auto auto;
+  gap: 1.5rem 3rem;
   align-items: center;
 }
 
-.showcase-card.reverse {
-  direction: rtl;
+/* On desktop, image spans full height in col 1; text, tags, button stack in col 2 */
+.showcase-card > .showcase-image-area {
+  grid-column: 1;
+  grid-row: 1 / -1;
 }
 
-.showcase-card.reverse>* {
-  direction: ltr;
+.showcase-card > .showcase-text {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.showcase-card > .showcase-tags-row {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+}
+
+.showcase-card > .showcase-visit-btn {
+  grid-column: 2;
+  grid-row: 3;
+  align-self: start;
+}
+
+/* Reverse card: image goes to col 2, text/tags/button to col 1 */
+.showcase-card.reverse > .showcase-image-area {
+  grid-column: 2;
+}
+
+.showcase-card.reverse > .showcase-text,
+.showcase-card.reverse > .showcase-tags-row,
+.showcase-card.reverse > .showcase-visit-btn {
+  grid-column: 1;
 }
 
 .showcase-image-area {
@@ -915,7 +954,36 @@ footer.main-footer {
   .showcase-card,
   .showcase-card.reverse {
     grid-template-columns: 1fr;
-    direction: ltr;
+    grid-template-rows: auto;
+  }
+
+  /* Reset grid placement so order takes effect */
+  .showcase-card > .showcase-image-area,
+  .showcase-card.reverse > .showcase-image-area {
+    grid-column: 1;
+    grid-row: auto;
+    order: 2;
+  }
+
+  .showcase-card > .showcase-text,
+  .showcase-card.reverse > .showcase-text {
+    grid-column: 1;
+    grid-row: auto;
+    order: 1;
+  }
+
+  .showcase-card > .showcase-tags-row,
+  .showcase-card.reverse > .showcase-tags-row {
+    grid-column: 1;
+    grid-row: auto;
+    order: 3;
+  }
+
+  .showcase-card > .showcase-visit-btn,
+  .showcase-card.reverse > .showcase-visit-btn {
+    grid-column: 1;
+    grid-row: auto;
+    order: 4;
   }
 }
 
@@ -964,10 +1032,47 @@ footer.main-footer {
 
   .about-bio-section {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .about-bio-title {
+    grid-column: 1;
+    grid-row: auto;
+    order: 1;
   }
 
   .about-bio-image {
-    order: -1;
+    grid-column: 1;
+    grid-row: auto;
+    order: 2;
+  }
+
+  .about-bio-desc {
+    grid-column: 1;
+    grid-row: auto;
+    order: 3;
+  }
+
+  /* ── Mobile image sizing ── */
+  .hero-visual {
+    max-height: 50vh;
+  }
+
+  .about-photo-wrapper {
+    max-width: 220px;
+  }
+
+  .showcase-image-area {
+    min-height: 200px;
+    max-height: 280px;
+  }
+
+  .showcase-image-area iframe {
+    min-height: 200px !important;
+  }
+
+  .project-image-wrapper.aspect-video {
+    max-height: 220px;
   }
 
   .skills-grid {
@@ -1001,11 +1106,6 @@ footer.main-footer {
     gap: 2rem;
   }
 
-  .showcase-card,
-  .showcase-card.reverse {
-    grid-template-columns: 1fr;
-    direction: ltr;
-  }
 }
 
 /* Page Transition Animations */
