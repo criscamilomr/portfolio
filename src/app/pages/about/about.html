@@ -1,20 +1,22 @@
 <div class="container" style="padding-bottom: var(--section-padding);">
   <!-- Bio Section -->
   <section class="about-bio-section">
-    <div class="about-bio-text">
+    <div class="about-bio-title">
       <h1 class="font-headline-xl" [innerHTML]="ts.t().about_title"></h1>
+    </div>
+    <div class="about-bio-image">
+      <div class="about-photo-wrapper">
+        <img alt="Foto profesional de Cristian Camilo Montaño Renteria" ngSrc="assets/images/profile.png" width="380"
+          height="475" priority />
+      </div>
+    </div>
+    <div class="about-bio-desc">
       <p class="font-body-lg" style="color: var(--color-on-surface-variant); max-width: 42rem;">
         {{ ts.t().about_intro }}
       </p>
       <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
         <a href="https://linkedin.com/in/ccmontanomr/" target="_blank" rel="noopener noreferrer" class="btn-primary">Ver
           LinkedIn</a>
-      </div>
-    </div>
-    <div class="about-bio-image">
-      <div class="about-photo-wrapper">
-        <img alt="Foto profesional de Cristian Camilo Montaño Renteria" ngSrc="assets/images/profile.png" width="380"
-          height="475" priority />
       </div>
     </div>
   </section>
