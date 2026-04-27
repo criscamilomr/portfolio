@@ -56,11 +56,13 @@ export class ParticlesBg implements AfterViewInit, OnDestroy {
   private height = 0;
   private dpr = 1;
 
-  // Interaction radius — particles within this distance react to the cursor
+  // Configuration Constants
   private readonly MOUSE_RADIUS = 180;
-  // How many particles per 10 000 px² of screen area
-  private readonly DENSITY = 1.6;
-  // Colour extracted from the design system: --color-secondary (#ab00a2)
+  private readonly DENSITY = 0.8; // Reduced from 1.6 for a cleaner look
+  private readonly BASE_SPEED = 0.3; // Speed multiplier for autonomous drift
+  private readonly REPEL_FORCE = 1.2; // How strongly the mouse pushes particles
+
+  // Colour: --color-secondary (#ab00a2)
   private readonly PARTICLE_R = 171;
   private readonly PARTICLE_G = 0;
   private readonly PARTICLE_B = 162;
@@ -87,13 +89,10 @@ export class ParticlesBg implements AfterViewInit, OnDestroy {
     this.resize();
     this.initParticles();
 
-    // Use pointer-events on the host so the canvas itself never blocks clicks,
-    // but listen on the document so we always track the mouse.
     document.addEventListener('mousemove', this.onMouseMove, { passive: true });
     document.addEventListener('mouseleave', this.onMouseLeave);
     window.addEventListener('resize', this.onResize, { passive: true });
 
-    // Run the animation loop outside Angular's zone for maximum performance
     this.zone.runOutsideAngular(() => this.animate());
   }
 
@@ -121,16 +120,16 @@ export class ParticlesBg implements AfterViewInit, OnDestroy {
     for (let i = 0; i < count; i++) {
       const x = Math.random() * this.width;
       const y = Math.random() * this.height;
-      const radius = Math.random() * 3.5 + 1.5; // 1.5 – 5 px
-      const baseOpacity = Math.random() * 0.3 + 0.08; // 0.08 – 0.38
+      const radius = Math.random() * 3.5 + 1.5;
+      const baseOpacity = Math.random() * 0.3 + 0.08;
 
       this.particles.push({
         x,
         y,
         baseX: x,
         baseY: y,
-        vx: (Math.random() - 0.4) * 0.4,
-        vy: (Math.random() - 0.4) * 0.4,
+        vx: (Math.random() - 0.5) * this.BASE_SPEED,
+        vy: (Math.random() - 0.5) * this.BASE_SPEED,
         radius,
         opacity: baseOpacity,
         baseOpacity,
@@ -166,8 +165,8 @@ export class ParticlesBg implements AfterViewInit, OnDestroy {
         const angle = Math.atan2(dy, dx);
 
         // Repel
-        p.x += Math.cos(angle) * force * 1.8;
-        p.y += Math.sin(angle) * force * 1.8;
+        p.x += Math.cos(angle) * force * this.REPEL_FORCE;
+        p.y += Math.sin(angle) * force * this.REPEL_FORCE;
 
         // Brighten on proximity
         p.opacity = p.baseOpacity + force * 0.45;
